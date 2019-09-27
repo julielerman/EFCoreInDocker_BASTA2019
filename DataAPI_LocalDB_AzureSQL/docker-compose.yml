@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  dataapidocker:
+    image: ${DOCKER_REGISTRY-}dataapidocker
+    build:
+      context: .
+      dockerfile: DataAPIDocker/Dockerfile
+    environment:
+      - DB_PW
+      - DB_UserId
